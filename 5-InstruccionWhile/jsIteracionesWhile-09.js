@@ -7,15 +7,20 @@ function mostrar()
 	var numeroIngresado;
 	var numeroMaximo;
 	var numeroMinimo;
-	var respuesta;
+	var respuesta = true;
 	//iniciar variables
 	banderaDelPrimero="es el primero";
-	respuesta='si';
-	while(respuesta=="si")
+
+	do
 	{
-		
-		respuesta=prompt("desea continuar?");
-	}
+		numeroIngresado = prompt("Ingrese un Número");
+		numeroIngresado = parseInt(numeroIngresado);
+
+		respuesta=confirm("¿Desea continuar?");
+	}while(respuesta);
+
+
+
 	txtIdMaximo.value=numeroMaximo;
 	txtIdMinimmo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN
