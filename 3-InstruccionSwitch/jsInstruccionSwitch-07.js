@@ -8,13 +8,13 @@ function mostrar()
 	switch (destinoIngresado) 
 	{
 		case "Bariloche":
-			alert("Sur");
+			alert("Oeste");
 			break;
 		case "Cataratas":
 			alert("Norte");
 			break;
 		case "Mar del plata":
-			alert("Oeste");
+			alert("Este");
 			break;
 		case "Ushuaia":
 			alert("Sur");
