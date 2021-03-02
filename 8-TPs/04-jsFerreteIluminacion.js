@@ -18,5 +18,63 @@ un 10% de ingresos brutos en informar del impuesto con el siguiente mensaje:
  */
 function CalcularPrecio () 
 {
- 	
+    let cantidadLamparas;
+    let marca;
+    let precio = 35;
+    let descuento;
+    let precioConDesc;
+    let ingresosBrutos;
+
+    cantidadLamparas = document.getElementById("txtIdCantidad").value;
+    cantidadLamparas = parseInt(cantidadLamparas);
+    marca = document.getElementById("Marca").value;  
+
+
+    if (cantidadLamparas >=6)
+    {
+        descuento = 0.50;
+    }
+    else if (cantidadLamparas == 5)
+    {
+        if (marca == "ArgentinaLuz")
+        {
+            descuento = 0.60; //descuento del 40%
+        }else {
+            descuento = 0.70; //descuento del 30%
+        }
+    }
+    else if (cantidadLamparas == 4)
+    {
+        if(marca == "ArgentinaLuz" || marca =="FelipeLamparas")
+        {
+            descuento = 0.75; //descuento del 25%
+        }else {
+            descuento = 0.80; //descuento del 20%
+        }
+    }
+    else if (cantidadLamparas == 3)
+    {
+        if(marca == "ArgentinaLuz")
+        {
+            descuento = 0.85; //descuento del 15%
+        }else if (marca == "FelipeLamparas")
+        {
+            descuento = 0.90; //descuento del 10%
+        }else{
+            descuento = 0.95; //descuento del 5%
+        }
+
+    }else{
+        descuento = 1; //sin descuento
+    }
+
+    precioConDesc = (cantidadLamparas * precio) * descuento;
+    if(precioConDesc > 120)
+    {
+        ingresosBrutos = precioConDesc * 0.10;
+        console.log(ingresosBrutos);
+        alert("Usted va a pagar "+ingresosBrutos+" de IIBB");
+        precioConDesc = precioConDesc + ingresosBrutos;
+    }
+    txtIdprecioDescuento.value = precioConDesc;
 }
