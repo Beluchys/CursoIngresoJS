@@ -60,21 +60,21 @@ function mostrar()
 	promedioNegativos = acumuladorNegativos /contadorNegativos;
 	diferencia = contadorPositivos - contadorNegativos;
 
-	document.write("la suma de los negativos es :"+acumuladorNegativos);
+	document.write("la suma de los negativos es :"+acumuladorNegativos+"<br>");
 
-	document.write("la suma de los positivos es :"+acumuladorPositivos);
-		
-	document.write("la cantidad de los positivos es :"+contadorPositivos);
+	document.write("la suma de los positivos es :"+acumuladorPositivos+"<br>");
 
-	document.write("la cantudad de los negativos es :"+contadorNegativos);
+	document.write("la cantidad de los positivos es :"+contadorPositivos+"<br>");
 
-	document.write("la cantidad de ceros es :"+contadorCeros);
+	document.write("la cantudad de los negativos es :"+contadorNegativos+"<br>");
 
-	document.write("la cantidad de numero pares es :"+contadorPares);
+	document.write("la cantidad de ceros es :"+contadorCeros+"<br>");
 
-	document.write("El promedio de los positivos es :"+promedioPositivos);
+	document.write("la cantidad de numero pares es :"+contadorPares+"<br>");
+
+	document.write("El promedio de los positivos es :"+promedioPositivos+"<br>");
 	
-	document.write("El promedio de los negativos es :"+promedioNegativos);
+	document.write("El promedio de los negativos es :"+promedioNegativos+"<br>");
 	
-	document.write("la diferencia entre positivo y negativo es :"+diferencia);
+	document.write("la diferencia entre positivo y negativo es :"+diferencia+"<br>");
 }//FIN DE LA FUNCIÓN
